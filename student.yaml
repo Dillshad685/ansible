@@ -1,4 +1,4 @@
-student 
+student:
 -name: "Dillshad"
  dob: 04-07-2000
  addresses:
@@ -34,4 +34,6 @@ tasks:
    "name: {{ name }}"
    "dob: {{ dob }}"
    "skills: {{ skills }}
+
+# ansible all -i "3.238.114.50", -e "ansible_user=ec2-user" -e "ansible_password=DevOps321" -m ping
  
