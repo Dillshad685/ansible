@@ -26,3 +26,12 @@ student
   -java
   -devops
   -cloud
+
+tasks:
+ -name: print student info
+  ansible.builtin.debug:
+   student info:
+   "name: {{ name }}"
+   "dob: {{ dob }}"
+   "skills: {{ skills }}
+ 
