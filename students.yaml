@@ -1,0 +1,46 @@
+- name: Students data
+  hosts: localhost
+  connection: local
+
+  vars:
+    students:
+      - name: "Dillshad"
+        dob: "04-07-2000"
+        addresses:
+          - doorno: 21
+            street: "gandhi nagar"
+            type: "perm"
+          - doorno: 22
+            street: "gandhi nagar"
+            type: "temp"
+        skills:
+          - java
+          - devops
+          - cloud
+
+      - name: "Dillshad"
+        dob: "04-07-2000"
+        addresses:
+          - doorno: 21
+            street: "gandhi nagar"
+            type: "perm"
+          - doorno: 22
+            street: "gandhi nagar"
+            type: "temp"
+        skills:
+          - java
+          - devops
+          - cloud
+
+  tasks:
+    - name: Print each student's info
+      ansible.builtin.debug:
+        msg: |
+          Name: {{ item.name }}
+          DOB: {{ item.dob }}
+          Skills: {{ item.skills }}
+          Addresses:
+          {% for addr in item.addresses %}
+            - Door No: {{ addr.doorno }}, Street: {{ addr.street }}, Type: {{ addr.type }}
+          {% endfor %}
+      loop: "{{ students }}"
