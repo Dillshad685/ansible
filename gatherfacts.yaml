@@ -8,3 +8,4 @@
       msg: "{{ ansible_facts }}"
 
 
+# returns the public IP address from ini file as well as from cmd
