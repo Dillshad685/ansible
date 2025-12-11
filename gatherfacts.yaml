@@ -3,9 +3,8 @@
   connection: local
 
   tasks:
-
   - name: facts
     ansible.builtin.debug:
-     facts: "{{ ansible_facts }}"
+      facts: "{{ ansible_facts }}"
 
 
