@@ -1,31 +1,33 @@
-student:
--name: "Dillshad"
- dob: 04-07-2000
- addresses:
- -doorno: 21
-  street: "gandhi nagar"
-  type: "perm"
- -doorno: 22
-  street: "gandhi nagar"
-  type: "tem"
- -skills:
-  -java
-  -devops
-  -cloud
+- name:students data
+  hosts: local
+  connection: local
+  -name: "Dillshad"
+   dob: 04-07-2000
+   addresses:
+   -doorno: 21
+    street: "gandhi nagar"
+    type: "perm"
+   -doorno: 22
+    street: "gandhi nagar"
+    type: "tem"
+   -skills:
+    -java
+    -devops
+    -cloud
 
--name: "Dillshad"
- dob: 04-07-2000
- addresses:
- -doorno: 21
-  street: "gandhi nagar"
-  type: "perm"
- -doorno: 22
-  street: "gandhi nagar"
-  type: "tem"
- -skills:
-  -java
-  -devops
-  -cloud
+   -name: "Dillshad"
+    dob: 04-07-2000
+    addresses:
+    -doorno: 21
+     street: "gandhi nagar"
+     type: "perm"
+    -doorno: 22
+     street: "gandhi nagar"
+     type: "tem"
+  -skills:
+   -java
+   -devops
+   -cloud
 
 tasks:
  -name: print student info
