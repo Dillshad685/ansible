@@ -1,5 +1,6 @@
 - name: "ping the server"
   hosts: frontend # Which server you are connecting to
+  gather_facts: no
   # List of tasks/collections/modules
   tasks:
   - name: ping
