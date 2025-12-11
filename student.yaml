@@ -32,12 +32,17 @@
        - cloud
 
   tasks:
-   - name: print student info
-     ansible.builtin.debug:
-     student info:
-     "name: {{ name }}"
-     "dob: {{ dob }}"
-     "skills: {{ skills }}""
-
-# ansible all -i "3.238.114.50", -e "ansible_user=ec2-user" -e "ansible_password=DevOps321" -m ping
+    - name: Print each student's info
+      ansible.builtin.debug:
+        msg: |
+          Name: {{ item.name }}
+          DOB: {{ item.dob }}
+          Skills: {{ item.skills }}
+          Addresses:
+          {% for addr in item.addresses %}
+            - Door No: {{ addr.doorno }}, Street: {{ addr.street }}, Type: {{ addr.type }}
+          {% endfor %}
+      loop: "{{ students }}"
+# ansible all -i "3.238.114.50", -e "ansible_user=ec2-user" -e "ansible_password=DevOps321" -m ping // to check conencted to ansible
+#ansible all -i "3.238.114.50," -u ec2-user -e "ansible_password=DevOps321" -m setup  // to get fact file 
  
