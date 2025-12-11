@@ -43,7 +43,12 @@
             - Door No: {{ addr.doorno }}, Street: {{ addr.street }}, Type: {{ addr.type }}
           {% endfor %}
       loop: "{{ students }}"
+
+
 # ansible all -i "3.238.114.50", -e "ansible_user=ec2-user" -e "ansible_password=DevOps321" -m ping // to check conencted to ansible
 #ansible all -i "3.238.114.50," -u ec2-user -e "ansible_password=DevOps321" -m setup  // to get fact file
- 
+#ansible-playbook -i "3.238.114.50," -e "ansible_user=ec2-user" -e "ansible_password=DevOps321" gatherfacts.yaml // to run a playbook
+#var and msg are the only two variables which debug has 
+
+
  
