@@ -1,5 +1,5 @@
 - name: play:1
-  host: frontend
+  hosts: frontend
   tasks:
    - name: play:1 and taks:1
      ansible.builtin.debug:
@@ -10,7 +10,7 @@
      msg: "Hello from play:1 and task:2"
 
 - name: play:2
-  host: frontend
+  hosts: frontend
   tasks:
    - name: play:2 and task:1
      ansible.builtin.debug:
