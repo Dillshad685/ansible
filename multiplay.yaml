@@ -3,20 +3,20 @@
   tasks:
    - name: play:1 and taks:1
      ansible.builtin.debug:
-     msg: "Hello from play:1 and task:1"
+      msg: "Hello from play:1 and task:1"
     
    - name: play:01 and task:02
      ansible.builtin.debug:
-     msg: "Hello from play:1 and task:2"
+      msg: "Hello from play:1 and task:2"
 
 - name: play:2
   hosts: frontend
   tasks:
    - name: play:2 and task:1
      ansible.builtin.debug:
-     msg: "Hello from play:2 and task:1"
+      msg: "Hello from play:2 and task:1"
 
    - name: play:2 and task:2
      ansible.builtin.debug:
-     msg: "Hello from play:2 and task:2"
+      msg: "Hello from play:2 and task:2"
     
