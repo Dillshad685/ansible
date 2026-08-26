@@ -1,0 +1,35 @@
+- name: "Dillshad"
+  dob: "04-07-2000"
+  address:
+  - doorno: "5-290"
+    street: "Devanhalli"
+    area: "near tippu masjid"
+    type: "current"
+
+  - doorno: "5=292"
+    street: "Bangalore"
+    area: "Near high school"
+    type: "permanent"
+  skills: 
+  - shell
+  - linux
+  - ansible
+  - terraform
+
+- name: "Dillshad"
+  dob: "04-07-2000"
+  address:
+  - doorno: "5-290"
+    street: "Devanhalli"
+    area: "near tippu masjid"
+    type: "current"
+
+  - doorno: "5=292"
+    street: "Bangalore"
+    area: "Near high school"
+    type: "permanent"
+  skills: 
+  - shell
+  - linux
+  - ansible
+  - terraform
