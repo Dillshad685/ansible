@@ -1,16 +1,28 @@
+# - name: play level variables
+#   hosts: localhost
+#   connection: local
+#   vars:
+#    course: ansible
+#    Duration: 10hours
+#    Learner: Dillshad
+
+#   tasks:
+#   - name: print course info
+#     ansible.builtin.debug:
+#       msg: "Course name is: {{ course }}, duration is: {{ Duration }}, learner is: {{ Learner }}"
+
+
+
 - name: play level variables
-  hosts: localhost
+  host: localhost
   connection: local
   vars:
-   course: ansible
-   Duration: 10hours
-   Learner: Dillshad
-
+    course: ansible
+    duration: 11hours
+    learner: dillshad been learning since 8 months
+  
   tasks:
-  - name: print course info
-    ansible.builtin.debug:
-      msg: "Course name is: {{ course }}, duration is: {{ Duration }}, learner is: {{ Learner }}"
-
-
-
+    - name: print variables
+      ansible.builtin.debug:
+      msg: "course details are: {{ course }}, duration is {{ duration }}, learner is {{ learner }}"
       
