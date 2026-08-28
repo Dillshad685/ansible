@@ -14,6 +14,6 @@
       - cloud: aws 
         cm: ansible 
   tasks:
-    - name: print all
-      ansible.builtin.debug:
+  - name: print all
+    ansible.builtin.debug:
       msg: "course: {{ course }}, duration: {{ duration }}, is_love: {{ is_live }}, tools used: {{ tools }}, concepts covered: {{ concepts }}"
