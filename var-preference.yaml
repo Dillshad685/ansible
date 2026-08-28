@@ -17,6 +17,7 @@
   vars_prompt:
     - name: Name
       prompt: What is your Name?
+      private: false
   tasks:
   - name: testing variable preference
     vars: 
