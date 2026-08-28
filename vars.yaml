@@ -27,12 +27,14 @@
 #         msg: "course details are: {{ course }}, duration is {{ duration }}, learner is {{ learner }}"
 
 
-- name: print file variables
-  hosts: localhost
-  connection: local
-  vars_files:
-    - course.yaml
-  tasks:
-    - name: print variables
-      ansible.builtin.debug:
-        msg: "course details are: {{ course }}, duration is {{ duration }}, learner is {{ learner }}"
+# - name: print file variables
+#   hosts: localhost
+#   connection: local
+#   vars_files:
+#     - course.yaml
+#   tasks:
+#     - name: print variables
+#       ansible.builtin.debug:
+#         msg: "course details are: {{ course }}, duration is {{ duration }}, learner is {{ learner }}"
+
+NAME: from file level
