@@ -15,7 +15,7 @@
   vars_files:
     - course.yaml
   vars_prompt:
-    - NAME: Name
+    - name: Name
       prompt: What is your Name?
   tasks:
   - name: testing variable preference
