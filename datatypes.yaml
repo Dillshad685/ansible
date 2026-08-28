@@ -13,7 +13,7 @@
     concepts:
       - cloud: aws 
         cm: ansible 
-    tasks:
+  tasks:
     - name: print all
       ansible.builtin.debug:
       msg: "course: {{ course }}, duration: {{ duration }}, is_love: {{ is_live }}, tools used: {{ tools }}, concepts covered: {{ concepts }}"
