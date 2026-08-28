@@ -8,7 +8,7 @@
 
 - name: print variables 
   hosts: localhost
-  connections: local
+  connection: local
   become: yes
   vars:
     NAME: from play level
