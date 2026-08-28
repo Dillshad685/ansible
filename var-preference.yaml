@@ -1,0 +1,27 @@
+#from play level
+#from var-file level
+#from prompt level
+#from task level
+#from inventory level
+#from command line level
+
+
+- name: print variables 
+  hosts: localhost
+  connections: local
+  become: yes
+  vars:
+    NAME: from play level
+  vars_files:
+    - course.yaml
+  vars_prompt:
+    - name: Name
+      prompt: What is your Name?
+  tasks:
+  - name: testing variable preference
+    vars: 
+      NAME: from task level
+    ansible.builtin.debug:
+      msg: "Name: {{ NAME }}"
+
+  
