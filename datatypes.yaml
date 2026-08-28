@@ -4,7 +4,7 @@
   become: yes
   vars:
     course: "this is devops course"
-    duration: 110 hours
+    duration: "110 hours"
     is_live: true
     tools:
       - linux
@@ -16,4 +16,4 @@
   tasks:
   - name: print all
     ansible.builtin.debug:
-      msg: "course: {{ course }}, duration: {{ duration }}, is_love: {{ is_live }}, tools used: {{ tools }}, concepts covered: {{ concepts }}"
+      msg: "course: {{ course }}, duration: {{ duration }}, is_live: {{ is_live }}, tools used: {{ tools }}, concepts covered: {{ concepts }}"
