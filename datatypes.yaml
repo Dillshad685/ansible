@@ -17,3 +17,24 @@
   - name: print all
     ansible.builtin.debug:
       msg: "course: {{ course }}, duration: {{ duration }}, is_live: {{ is_live }}, tools used: {{ tools }}, concepts covered: {{ concepts }}"
+
+
+
+
+
+
+# has to divisible by 1 and itself
+# it means two divisors
+
+#num=2
+
+# count=0
+# for(i=1; i<=num; i++)
+# do
+#  if [ $num % i -eq 0 ];
+#     count=count+1
+#   fi
+# done
+
+# if $count -eq 2 
+# echo "prime"
