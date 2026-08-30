@@ -16,17 +16,30 @@
 #     when: ansible_os_family == "RedHat"
 
 
-- name: to check loops
+# - name: to check loops
+#   hosts: local
+#   connection: local
+#   become: yes
+#   tasks:
+#   - name: check loops
+#     ansible.builtin.debug:
+#       msg: "apps are {{ item }}"
+#     loop:
+#       - nginx
+#       - mysql
+#       - redis
+
+
+- name: install packages
   hosts: local
   connection: local
   become: yes
   tasks:
-  - name: check loops
-    ansible.builtin.debug:
-      msg: "apps are {{ item }}"
-    loop:
-      - nginx
-      - mysql
-      - redis
-
-
+    - name: installing packages
+      ansible.builtin.package:
+        name: "installing {{ item }}"
+      loop:
+        - nginx
+        - mysql
+        - zip
+        
