@@ -24,7 +24,7 @@
         msg: "technologies are: {{ technologies | split (',') }}"  #{ linux, shell, ansible}
     - name: covert map to list 
       ansible.builtin.debug:
-        msg: "lists are: {{ tags | dict2items }}"  #{ application:payment, enviroment: dev}
+        msg: "lists are: {{ tags | dict2items }}"  #{ key:application,value:payment}, {keyenviroment: dev}
     - name: convert items to dict
       ansible.builtin.debug:
         msg: "maps are: {{ listTags | items2dict }}" 
@@ -47,3 +47,17 @@
     - name: check if IP address is valid or not
       ansible.builtin.debug:
         msg: "{{ ipaddress | ansible.utils.ipv4 }}"
+    - name: grep for root
+      ansible.builtin.command: cat /etc/passwd | grep root
+      register: command_output
+    - name: print the command_output
+      ansible.builtin.debug:
+      msg: "o/p: {{ command_output }}"
+    - name: redirect the o/p
+      ansible.builtin.command: ls -ltr > /tmp/ouput.txt
+      register: redirect_output
+      #ignore_errors: true
+    - name: print redirect o/p
+      ansible.builtin.debug:
+      msg: "{{ redirect_output }}"
+    - name: 
