@@ -37,7 +37,8 @@
   tasks:
     - name: installing packages
       ansible.builtin.package:
-        msg: "installing {{ item }}"
+        name: "installing {{ item }}"
+        state: latest
       loop:
         - nginx
         - mysql
