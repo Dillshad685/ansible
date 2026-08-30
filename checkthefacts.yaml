@@ -1,16 +1,32 @@
-- name: check the facts
-  hosts: all
+# - name: check the facts
+#   hosts: all
+#   connection: local
+#   become: yes
+#   tasks:
+#   - name: install nginx if RedHat
+#     ansible.builtin.dnf:
+#      name: nginx
+#      state: latest
+#     when: ansible_os_family == "RedHat"
+
+#   - name: install zip if RedHat
+#     ansible.builtin.dnf:
+#       name: zip
+#       state: latest
+#     when: ansible_os_family == "RedHat"
+
+
+- name: to check loops
+  hosts: local
   connection: local
   become: yes
   tasks:
-  - name: install nginx if RedHat
-    ansible.builtin.dnf:
-     name: nginx
-     state: latest
-    when: ansible_os_family == "RedHat"
+  - name: check loops
+    ansible.builtin.debug:
+      msg: apps are "{{ item }}"
+    loop:
+      - nginx
+      - mysql
+      - redis
 
-  - name: install zip if RedHat
-    ansible.builtin.dnf:
-      name: zip
-      state: latest
-    when: ansible_os_family == "RedHat"
+
