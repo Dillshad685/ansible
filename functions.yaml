@@ -7,4 +7,4 @@
   tasks:
     - name: convert string to List
       ansible.builtin.debug:
-      msg: "technologies are: {{ technologies | split (',') }}"
+        msg: "technologies are: {{ technologies | split (',') }}"
