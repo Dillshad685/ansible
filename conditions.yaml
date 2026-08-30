@@ -22,3 +22,8 @@
       name: nginx
       state: latest
     when: ansible_os_family=="RedHat"
+  - name: start nginx  
+    ansible.builtin.service:
+      name: nginx
+      state: started
+      enabled: yes
