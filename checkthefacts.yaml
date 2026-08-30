@@ -37,7 +37,7 @@
   tasks:
     - name: installing packages
       ansible.builtin.package:
-        name: "installing {{ item }}"
+        name: "{{ item }}"
         state: latest
       loop:
         - nginx
