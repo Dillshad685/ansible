@@ -52,8 +52,8 @@
       register: command_output
     - name: print the command_output
       ansible.builtin.debug:
-      msg: "o/p: {{ command_output }}"
-    - name: redirect the o/p
+      msg: "outputp: {{ command_output }}"
+    - name: redirect the output
       ansible.builtin.command: ls -ltr > /tmp/ouput.txt
       register: redirect_output
       #ignore_errors: true
