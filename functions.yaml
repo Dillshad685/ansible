@@ -1,0 +1,10 @@
+- name: inbuilt functions
+  hosts: local
+  connection: local
+  become: yes
+  vars:
+    technologies: linux. shell, ansible
+  tasks:
+    - name: convert string to List
+      ansible.builtin.debug:
+      msg: "technologies are: {{ technologies | split (',') }}"
