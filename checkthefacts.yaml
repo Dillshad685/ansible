@@ -23,7 +23,7 @@
   tasks:
   - name: check loops
     ansible.builtin.debug:
-      msg: apps are "{{ item }}"
+      msg: "apps are {{ item }}"
     loop:
       - nginx
       - mysql
